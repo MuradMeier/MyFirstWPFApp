@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <ApplicationDefinition Update="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="View\WindowAccount.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\WindowAgreement.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\WindowBank.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\WindowNewAccount.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\WindowNewAgreement.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\WindowNewBank.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\WindowNewTypeAccount.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\WindowTypeAccount.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\WindowAccount.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\WindowAgreement.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\WindowBank.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\WindowNewAccount.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\WindowNewAgreement.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\WindowNewBank.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\WindowNewTypeAccount.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\WindowTypeAccount.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>
