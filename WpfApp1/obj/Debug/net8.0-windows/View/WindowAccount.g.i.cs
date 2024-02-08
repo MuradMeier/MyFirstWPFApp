@@ -85,7 +85,7 @@ namespace WpfApp1.View {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/WpfApp1;V1.0.0.0;component/view/windowaccount.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/WpfApp1;component/view/windowaccount.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\View\WindowAccount.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

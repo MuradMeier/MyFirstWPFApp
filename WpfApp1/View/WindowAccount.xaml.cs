@@ -111,6 +111,10 @@ namespace WpfApp1.View
         }
             private void btnAdd_Click(object sender, RoutedEventArgs e)
         {
+
+            banks = vmBank.ListBank.ToList();
+            agreements = vmAgreement.ListAgreement.ToList();
+            typeAccounts = vmTypeAccount.ListTypeAccount.ToList();
             WindowNewAccount wnAccount = new WindowNewAccount
             {
                 Title = "Новый cчёт",
@@ -124,6 +128,8 @@ namespace WpfApp1.View
             };
             wnAccount.DataContext = acc;
             wnAccount.CbBank.ItemsSource = banks;
+            wnAccount.CbAgreement.ItemsSource = agreements;
+            wnAccount.CbTypeAccount.ItemsSource = typeAccounts;
             
             if (wnAccount.ShowDialog() == true)
             {
@@ -145,8 +151,7 @@ namespace WpfApp1.View
 
         private void btnDelete_Click(object sender, RoutedEventArgs e)
         {
-            AccountViewModel vmAccount = new AccountViewModel();
-            Account account = (Account)lvAccount.SelectedItem;
+            AccountDPO account = (AccountDPO)lvAccount.SelectedItem;
             if (account != null)
             {
                 MessageBoxResult result = MessageBox.Show("Удалить данные по счёту: " +
@@ -154,7 +159,13 @@ namespace WpfApp1.View
                 MessageBoxImage.Warning);
                 if (result == MessageBoxResult.OK)
                 {
-                    vmAccount.ListAccount.Remove(account);
+                    // удаление данных в списке отображения данных
+                    accountsDPO.Remove(account);
+
+                    // удаление данных в списке классов ListPerson<Person>
+                    Account acc = new Account();
+                    acc = acc.CopyFromAccountDPO(account);
+                    vmAccount.ListAccount.Remove(acc);
                 }
             }
             else

@@ -47,7 +47,7 @@ namespace WpfApp1
             string agreement = string.Empty;
             foreach (var agr in vmAgreement.ListAgreement)
             {
-                if (agr.Id == account.BankId)
+                if (agr.Id == account.AgreementId)
                 {
                     agreement = agr.Number;
                     break;

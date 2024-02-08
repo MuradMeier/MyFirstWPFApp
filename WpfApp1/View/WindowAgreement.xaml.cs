@@ -65,7 +65,7 @@ namespace WpfApp1.View
             Agreement agreement = (Agreement)lvAgreement.SelectedItem;
             if (agreement != null)
             {
-                MessageBoxResult result = MessageBox.Show("Удалить данные по счёту: " +
+                MessageBoxResult result = MessageBox.Show("Удалить данные по договору: " +
                 agreement.Number, "Предупреждение", MessageBoxButton.OKCancel,
                 MessageBoxImage.Warning);
                 if (result == MessageBoxResult.OK)

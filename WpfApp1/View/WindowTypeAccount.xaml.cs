@@ -77,9 +77,9 @@ namespace WpfApp1.View
         }
         private void btnAdd_Click(object sender, RoutedEventArgs e)
         {
-            WindowTypeAccount wnTypeAccount = new WindowTypeAccount
+            WindowNewTypeAccount wnTypeAccount = new WindowNewTypeAccount
             {
-                Title = "Новая должность",
+                Title = "Новый тип счёта",
                 Owner = this
             };
             // формирование кода новой должности
